@@ -14,18 +14,27 @@
         }
 
         main {
+            display: flex;
+            justify-content: flex-start;
+            align-content: space-between;
+            flex-flow: column nowrap;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
 
             width: 400px;
-            height: 400px;
+            height: 430px;
             background-color: red;
             box-shadow: 0px 1px 5px 1px rgb(0 0 0 / 54%);
+            border-radius: 10px;
         }
 
         main > section.fundo {
+            background-color: blue;
+            border-radius: 10px;
+            width: 400px;
+            height: 200px;
         }
 
         main > section.conteudo { 
@@ -38,7 +47,8 @@
         }
 
         h1#inline {
-            display: inline-block;
+            display: inline-flex;
+            height: 30px;
         }
 
         p {
@@ -51,10 +61,23 @@
             display: inline-block;
         }
 
+        article#content {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column nowrap;
+            height: 150px;
+        }
+
+        #conteudo > #content > img {
+            margin-bottom: 10px;
+        }
+
         article.numeros {
             display: flex;
             flex-flow: row nowrap;
             justify-content: space-around;
+            height: 40px;
         }
 
         #sombra {
@@ -65,14 +88,17 @@
 <body>
     <main>
         <section class="fundo">
-
+            <!-- Fundo -->
         </section>
 
         <section class="conteudo">
-            <h1 id="inline">
-                Victor Crest <p id="N">26</p>
-            </h1>
-            <p>London</p>
+            <article id="content">
+                <img src="" alt="">
+                <h1 id="inline">
+                    Victor Crest <p id="N">26</p>
+                </h1>
+                <p>London</p>
+            </article>
 
             <article id="sombra" class="numeros">
                 <h1>80K</h1>
